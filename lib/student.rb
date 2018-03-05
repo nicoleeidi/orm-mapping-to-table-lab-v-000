@@ -9,7 +9,7 @@ class Student
     DB[:conn].execute("CREATE TABLE IF NOT EXISTS students (id INTEGER PRIMARY KEY, name TEXT, grade TEXT)")
   end
   def save
-    DB[:conn].execute("INSERT INTO students (name,grade) VALUES(?,?,)",self.name,self.grade)
+    DB[:conn].execute("INSERT INTO students (name,grade) VALUES(?,?)",self.name,self.grade)
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
   def self.create(name:, grade:)
