@@ -1,9 +1,9 @@
 class Student
   def initialize
-  end 
+  end
   def save
-  end 
+  end
   # Remember, you can access your database connection anywhere in this class
-  #  with DB[:conn]  
-  
+  #  with DB[:conn]
+
 end
