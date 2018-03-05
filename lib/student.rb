@@ -6,7 +6,7 @@ class Student
     @id=id
   end
   def self.create_table
-    DB[:conn].execute("CREATE TABLE IF NOT EXISTS students (id INTEGER PRIMARY KEY, name TEXT, grade TEXT")
+    DB[:conn].execute("CREATE TABLE IF NOT EXISTS students (id INTEGER PRIMARY KEY, name TEXT, grade TEXT)")
   end
   def save
     DB[:conn].execute("INSERT INTO students VALUES(?,?)",self.name,self.grade)
