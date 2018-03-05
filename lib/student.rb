@@ -15,9 +15,10 @@ class Student
     student=Student.new(name:,grade:)
     student.save
     student
-  end 
+  end
   def self.drop_table
-  end 
+    DB[:conn].execute("DROP TABLE students")
+  end
   end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
